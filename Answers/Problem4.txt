@@ -1,0 +1,16 @@
+My first step would be to interview the researcher in person to more clearly identify the project goals and any other stakeholders who might have an interest. 
+
+To begin with I would want to estimate the amount of data expected to be stored and how this would be accessed to help plan how to go about gathering and storing the required data 
+along with ensuring that the format the data was stored in eased the researcher’s workflow. I would start with the following questions.
+
+1.	Can you estimate the time over which the data will need to be collected? Can you also estimate the number of accounts needing to be monitored. 
+2.	Who will use the data? Just you or do you have a number of researchers who will all access the database?
+3.	Have you dealt with similar data before, could you show me an example of your workflow for accessing it and analysing it.
+4.	What about long term storage, do you have a data repository and are there specific formats that you use. Are there memory considerations?
+5.	Is there anything in particular which would optimise the way you work  from a data analysis perspective.
+
+After, that I would want to want to try and get a better overview of the research goals to bear in mind as I performed the task.
+
+6.	Can you explain your research hypothesis in laypersons terms. (I would repeat this until I was able to summarise their goals back to them to their satisfaction)
+
+7.	What is your rationale for monitoring the particular groups you have chosen. Would you like to extend the accounts you are monitoring in the future? 

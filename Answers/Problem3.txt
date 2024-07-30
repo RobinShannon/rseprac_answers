@@ -1,0 +1,10 @@
+I would offer the following advice
+
+"As a high level coding language, basic python is not particulalry efficient at numerically intensive calculations. The numpy library wraps alot of C code which is much faster
+so in general, efficiency gains can be made by utilising built in numpy functions where possible eg replacing the "mroot = n ** 0.5" (line 8) with mroot = np.sqrt(n). In this case
+the nested while loops are likely to be the place where the most significant efficiency gains can be made. Try to reformat the algorithm to replace the while loops with for loops and try to make
+ensure than any python lists are instead converted into numpy arrays (you might want to look into "vectoristion" to avoid loops where possible).
+
+There are profiling tools to assess the time a python code spends on each line but in this case addressing the while loops and employing as much numpy functionality as you can is likely to be 
+you best bet before embarking upon this. 
+"

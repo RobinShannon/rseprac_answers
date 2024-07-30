@@ -1,0 +1,8 @@
+To quickly identify which files contain less than 100 values you can use the following command combining "find" and "exec" with "awk":
+
+find . -maxdepth 1 -type f -exec awk '{if (NF < 100) print FILENAME; exit}' {} \;
+
+Here the find portion of the command is simple, "find . -maxdepth 1 -type f" finds all  files (-type f) in the current directory only (. maxdepth 1). 
+The exec option uses the subsequent awk command on each file "found" seqeuntially. The awk '{if (NF < 100) print FILENAME; exit}' command checks the number of fields or values (NF)
+in each file and if NF is less than 100, the filename is printed to screen. In this case the values44 file is the only one to have less than 100 numbers in it.
+

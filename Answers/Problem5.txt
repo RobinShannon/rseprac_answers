@@ -1,0 +1,10 @@
+i)
+The variable fname_out gives a string path name for storing each .png figure. The file name is built up of three bits; the Home variable which is likely an absolute path to the 
+output directory, the Metadata variable which has the prefix “Ozone_” followed by some date and time information and “.png” file extension. 
+The date in the code snippet is hard coded but the comment indicates this could be read from the corresponding input file.  
+
+ii)
+Two variables are undefined. The “Home” variable likely indicates the path of the output directory. 
+This could be specified as an argument when running the python script or could default to the current directory via the os.getcwd() function. 
+The other undefined variable is “simhour” in the “Frame” variable which likely gives the associated time of the run. The rest of the “Frame” variable specifies that “simhour” will 
+be converted to a string with 4 significant digits padded by zeros. 

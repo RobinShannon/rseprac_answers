@@ -1,0 +1,17 @@
+I can change the extension of all files from .csv to .dat using the following one-liner in Linux "for f in *.csv; do mv "$f" "${f%.csv}.dat"; done"
+
+The explanation I would give is as follows:
+
+"To rename a file the mv comand can typically be used. However mv in Linux only acts on single files so in order to rename all the .csv files to .dat a BASH for loop can be used. 
+The following command will work:
+'for f in *.csv; do mv "$f" "${f%.csv}.dat"; done'
+Here 'for f in *.csv' sets up the loop over all files with the *.csv extension with each file assigned to the variable f.
+'do mv "$f" "${f%.csv}.dat"' uses the mv comand to rename each *.csv file ,f. Here $f is the filename a ${f%.csv} gives the filename with the .csv extension stripped. Other options for the mv command could be added here for example '--' would be needed if any filenames started with a '-' character. 
+Finally 'done' ends the BASH for loop. The whole loop jas been written on one line for simplicity.
+
+This works if every .csv file needs to be renamed. For more complexity the exec comand could be combined with find to e.g only rename .csv file that were modified within the last 10 minutes:
+
+find . -maxdepth 1 -type f -mmin -10 -name "*.csv" -exec bash -c 'mv "$0" "${0%.csv}.dat"' {} \;
+
+briefly the find command lists all file with "-name" *.csv modified within the last 10 minutes (-mmin 10). The "-exec" option then executes the mv "$0" "${0%.csv}.dat" command on each listed file sequentially.
+"
